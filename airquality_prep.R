@@ -15,7 +15,7 @@ air$X <- NULL
 
 # Convert temperature to celcius
 air$TempC <- round(5/9 * (air$Temp - 32), 1)
-air$TempC <- NULL
+air$Temp <- NULL
 
 # Replace Solar.R NAs with mean
 x_solar <- mean(air$Solar.R, na.rm = T)
