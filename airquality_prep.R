@@ -18,7 +18,7 @@ air$Temp <- round(5/9 * (air$Temp - 32), 1)
 
 # Replace Solar.R NAs with mean
 x_solar <- mean(air$Solar.R, na.rm = T)
-raw$Solar.R[is.na(raw$Solar.R)] <- x_solar
+air$Solar.R[is.na(air$Solar.R)] <- x_solar
 
 # Create a true date column and drop Day
 air$Date <- lubridate::ymd(paste("1973/", air$Month, "/", air$Day))
