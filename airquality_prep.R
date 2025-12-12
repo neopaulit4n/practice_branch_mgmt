@@ -14,7 +14,8 @@ air <- read.csv("airquality_raw.csv")
 air$X <- NULL
 
 # Convert temperature to celcius
-air$Temp <- round(5/9 * (air$Temp - 32), 1)
+air$TempC <- round(5/9 * (air$Temp - 32), 1)
+air$TempC <- NULL
 
 # Replace Solar.R NAs with mean
 x_solar <- mean(air$Solar.R, na.rm = T)
